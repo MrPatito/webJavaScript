@@ -1,0 +1,1 @@
+Con la nav bar no puedo hacer que sea stiky... lo comente por que se rompe, algo pasa que se posa sobre el footer
