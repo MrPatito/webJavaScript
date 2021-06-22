@@ -91,11 +91,17 @@ for (const modelo of carrito){
    
     console.log(modelo["precio"]);
     
+    
 }
-
+let precioTotal = modelo(precio[0]) + modelo(precio[1]) + modelo(precio[2]) + modelo(precio[3]);
+console.log(precioTotal)
 carritoPrecio.sort();
 console.log(carritoPrecio);
 
+for (const modelo of carrito){
+let contenedor = document.createElement("div");
+    contenedor.innerHTML = `<h6> ${carritoPrecio}</h6>`;
+    document.body.appendChild(contenedor);
+}
 
 
-    
