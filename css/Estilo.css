@@ -166,8 +166,29 @@ img {
         justify-content: space-around; }
         #estadisticas .contenido .productosLed button {
           margin-top: 15px;
-          background-color: #bb5604;
+          background-color: #fce1cb;
           border-radius: 7px 7px 7px 7px; }
+      #estadisticas .contenido #respuesta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px; }
+        #estadisticas .contenido #respuesta h2 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
+          color: #bba390;
+          padding: 15px 15px 15px 15px;
+          margin: 0; }
+        #estadisticas .contenido #respuesta p {
+          padding: 15px;
+          margin: 0;
+          font-family: 'roboto', sans-serif;
+          font-weight: 600;
+          font-size: x-large;
+          font-style: normal;
+          color: #fce1cb;
+          letter-spacing: 1px; }
     #estadisticas__titulos {
       display: grid;
       grid-area: titulo; }
