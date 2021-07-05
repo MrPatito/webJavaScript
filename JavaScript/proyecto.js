@@ -1,5 +1,9 @@
 
 
+$(() => {
+    console.log('El DOM esta listo');
+});
+
 
 function modelo (dimensiones, cantLed, watts, precio){
     this.dimensiones = dimensiones;
@@ -24,14 +28,32 @@ let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
 
 
+// $("#selectProdu2").click((e) => { 
+//     carrito.push(dosci)
+//     carritoPrecio.push(dosci["precio"])
+//     let total = carritoPrecio.reduce((a, b) => a + b, 0);
+
+//     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+//     let carritoP = localStorage.getItem('carrito')
+//     carritoPParse = JSON.parse(carritoP)
+//     console.log(carrito)
+//     console.log(carritoPrecio)
+//     console.log(carritoP)
+//     console.log(carritoPParse)
+   
+//     $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+//                             <p>$${total}</p>`);
+// });
+
+
 //Let Botones
 
 
-let boton2 = document.getElementById("selectProdu2")
-boton2.onclick = () =>{carrito.push(dosci)
+$("#selectProdu2").click((e) => { 
+    carrito.push(dosci)
     carritoPrecio.push(dosci["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-    console.log(total);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
 
@@ -42,18 +64,17 @@ boton2.onclick = () =>{carrito.push(dosci)
     console.log(carritoP)
     console.log(carritoPParse)
    
-    
-    document.getElementById("respuesta").innerHTML = 
-    `<h2>El total de su carrito es: </h2>
-    <p>$${total}</p>`}
+    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+                            <p>$${total}</p>`);
+});
+
     
 
 
-let boton3 = document.getElementById("selectProdu3")
-boton3.onclick = () =>{carrito.push(treci)
+$("#selectProdu3").click((e) => { 
+    carrito.push(treci)
     carritoPrecio.push(treci["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-    console.log(total);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
 
@@ -63,16 +84,15 @@ boton3.onclick = () =>{carrito.push(treci)
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
-    
-    document.getElementById("respuesta").innerHTML = `
-    <h2>El total de su carrito es: </h2>
-    <p>$${total}</p>`}
+   
+    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+                            <p>$${total}</p>`);
+});
 
-let boton4 = document.getElementById("selectProdu4")
-boton4.onclick = () =>{carrito.push(cuatri)
+$("#selectProdu4").click((e) => { 
+    carrito.push(cuatri)
     carritoPrecio.push(cuatri["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-    console.log(total);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
 
@@ -82,16 +102,16 @@ boton4.onclick = () =>{carrito.push(cuatri)
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
+   
+    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+                            <p>$${total}</p>`);
+});
 
-    document.getElementById("respuesta").innerHTML = `
-    <h2>El total de su carrito es: </h2>
-    <p>$${total}</p>`}
 
-let boton8 = document.getElementById("selectProdu8")
-boton8.onclick = () =>{carrito.push(ochi)
+$("#selectProdu8").click((e) => { 
+    carrito.push(ochi)
     carritoPrecio.push(ochi["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-    console.log(total);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
 
@@ -101,16 +121,16 @@ boton8.onclick = () =>{carrito.push(ochi)
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
+   
+    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+                            <p>$${total}</p>`);
+});
 
-    document.getElementById("respuesta").innerHTML = `
-    <h2>El total de su carrito es: </h2>
-    <p>$${total}</p>`}
 
-let boton10 = document.getElementById("selectProdu10")
-boton10.onclick = () =>{carrito.push(milonga)
+$("#selectProdu10").click((e) => { 
+    carrito.push(milonga)
     carritoPrecio.push(milonga["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-    console.log(total);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
 
@@ -120,16 +140,12 @@ boton10.onclick = () =>{carrito.push(milonga)
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
-
-    document.getElementById("respuesta").innerHTML = `
-    <h2>El total de su carrito es: </h2>
-    <p>$${total}</p>`}
-
-
+   
+    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
+                            <p>$${total}</p>`);
+});
 
 
-
-console.log(total);
 
 
 
