@@ -144,6 +144,14 @@ img {
       border-radius: 0px 0px 30px 30px;
       text-align: left;
       box-shadow: 2px 2px 6px rgba(121, 107, 87, 0.28); }
+      #estadisticas .contenido .selector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+        #estadisticas .contenido .selector button {
+          margin-top: 15px;
+          background-color: #fce1cb;
+          border-radius: 7px 7px 7px 7px; }
       #estadisticas .contenido__img img {
         margin: 0;
         border-radius: 0 0 30px 30px;
@@ -170,10 +178,13 @@ img {
           border-radius: 7px 7px 7px 7px; }
       #estadisticas .contenido #respuesta {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 15px; }
+        #estadisticas .contenido #respuesta .monto {
+          display: flex;
+          flex-direction: row; }
         #estadisticas .contenido #respuesta h2 {
           font-family: 'Montserrat', sans-serif;
           font-weight: 800;
