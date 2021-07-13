@@ -25,29 +25,20 @@ const carritoPrecio = []
 let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
 
-
-
-
-// $("#selectProdu2").click((e) => { 
-//     carrito.push(dosci)
-//     carritoPrecio.push(dosci["precio"])
-//     let total = carritoPrecio.reduce((a, b) => a + b, 0);
-
-//     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
-
-//     let carritoP = localStorage.getItem('carrito')
-//     carritoPParse = JSON.parse(carritoP)
-//     console.log(carrito)
-//     console.log(carritoPrecio)
-//     console.log(carritoP)
-//     console.log(carritoPParse)
-   
-//     $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-//                             <p>$${total}</p>`);
-// });
-
-
 //Let Botones
+$(".selector").click((e) => {
+    
+
+    $("#selectProdu2").fadeIn();
+    $("#selectProdu3").fadeIn();
+    $("#selectProdu4").fadeIn();
+    $("#selectProdu8").fadeIn();
+    $("#selectProdu10").fadeIn();
+    $("#vaciarCarrito").fadeIn();
+})
+
+
+
 
 
 $("#selectProdu2").click((e) => { 
@@ -64,14 +55,20 @@ $("#selectProdu2").click((e) => {
     console.log(carritoP)
     console.log(carritoPParse)
    
-    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-                            <p>$${total}</p>`);
+    $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${total}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
 });
 
     
 
 
 $("#selectProdu3").click((e) => { 
+    
     carrito.push(treci)
     carritoPrecio.push(treci["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
@@ -84,12 +81,20 @@ $("#selectProdu3").click((e) => {
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
+
+    
    
-    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-                            <p>$${total}</p>`);
+    $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${total}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
 });
 
 $("#selectProdu4").click((e) => { 
+    $("#vaciarCarrito").fadeIn();
     carrito.push(cuatri)
     carritoPrecio.push(cuatri["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
@@ -103,12 +108,18 @@ $("#selectProdu4").click((e) => {
     console.log(carritoP)
     console.log(carritoPParse)
    
-    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-                            <p>$${total}</p>`);
+    $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${total}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
 });
 
 
 $("#selectProdu8").click((e) => { 
+    $("#vaciarCarrito").fadeIn();
     carrito.push(ochi)
     carritoPrecio.push(ochi["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
@@ -122,12 +133,18 @@ $("#selectProdu8").click((e) => {
     console.log(carritoP)
     console.log(carritoPParse)
    
-    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-                            <p>$${total}</p>`);
+    $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${total}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
 });
 
 
 $("#selectProdu10").click((e) => { 
+    $("#vaciarCarrito").fadeIn();
     carrito.push(milonga)
     carritoPrecio.push(milonga["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
@@ -141,11 +158,29 @@ $("#selectProdu10").click((e) => {
     console.log(carritoP)
     console.log(carritoPParse)
    
-    $("#respuesta").html(`<h2>El total de su carrito es: </h2>
-                            <p>$${total}</p>`);
+    $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${total}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
 });
 
 
+$("#vaciarCarrito").click((e) => {
+    const carrito = []
+    const carritoPrecio = []
+    console.log(carritoPrecio)
 
+    localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+    let carritoP = localStorage.getItem('carrito')
+    carritoPParse = JSON.parse(carritoP)
+    console.log(carrito)
+    console.log(carritoPrecio)
+    console.log(carritoP)
+    console.log(carritoPParse)
+})
 
 
