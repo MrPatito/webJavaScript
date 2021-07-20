@@ -62,17 +62,22 @@ $("#btn1").click(() => {
     });
 });
 
-
-
 $("#selectProdu2").click((e) => { 
+    $("#vaciarCarrito").fadeIn();
     carrito.push(dosci)
     carritoPrecio.push(dosci["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+    localStorage.setItem("total", JSON.stringify(total))
+
+    let totalJson = localStorage.getItem('total')
+    totalPrecio = JSON.parse(totalJson)
 
     let carritoP = localStorage.getItem('carrito')
     carritoPParse = JSON.parse(carritoP)
+
+
     console.log(carrito)
     console.log(carritoPrecio)
     console.log(carritoP)
@@ -80,40 +85,95 @@ $("#selectProdu2").click((e) => {
    
     $("#respuesta").html(`<div class="monto">
                           <h2>El total de su carrito es: </h2>
-                          <p>$${total}</p>
+                          <p>$${totalPrecio}</p>
                           </div>
                           <div class="selector">
                           <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
                           </div>`);
+
+    $("#vaciarCarrito").click(() => {
+        carrito.length = 0
+        carritoPrecio.length = 0
+        total = 0
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+        let totalJson = localStorage.getItem('total')
+        totalPrecio = JSON.parse(totalJson)
+                       
+        let carritoP = localStorage.getItem('carrito')
+        carritoPParse = JSON.parse(carritoP)
+
+        console.log(carrito)
+        console.log(carritoPrecio)
+        console.log(carritoP)
+        console.log(total)
+        
+        $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${totalPrecio}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
+    })
 });
 
-    
-
-
 $("#selectProdu3").click((e) => { 
-    
+    $("#vaciarCarrito").fadeIn();
     carrito.push(treci)
     carritoPrecio.push(treci["precio"])
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+    localStorage.setItem("total", JSON.stringify(total))
+
+    let totalJson = localStorage.getItem('total')
+    totalPrecio = JSON.parse(totalJson)
 
     let carritoP = localStorage.getItem('carrito')
     carritoPParse = JSON.parse(carritoP)
+
+
     console.log(carrito)
     console.log(carritoPrecio)
     console.log(carritoP)
     console.log(carritoPParse)
-
-    
    
     $("#respuesta").html(`<div class="monto">
                           <h2>El total de su carrito es: </h2>
-                          <p>$${total}</p>
+                          <p>$${totalPrecio}</p>
                           </div>
                           <div class="selector">
                           <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
                           </div>`);
+
+    $("#vaciarCarrito").click(() => {
+        carrito.length = 0
+        carritoPrecio.length = 0
+        total = 0
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+        let totalJson = localStorage.getItem('total')
+        totalPrecio = JSON.parse(totalJson)
+                       
+        let carritoP = localStorage.getItem('carrito')
+        carritoPParse = JSON.parse(carritoP)
+
+        console.log(carrito)
+        console.log(carritoPrecio)
+        console.log(carritoP)
+        console.log(total)
+        
+        $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${totalPrecio}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
+    })
 });
 
 $("#selectProdu4").click((e) => { 
@@ -123,9 +183,15 @@ $("#selectProdu4").click((e) => {
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+    localStorage.setItem("total", JSON.stringify(total))
+
+    let totalJson = localStorage.getItem('total')
+    totalPrecio = JSON.parse(totalJson)
 
     let carritoP = localStorage.getItem('carrito')
     carritoPParse = JSON.parse(carritoP)
+
+
     console.log(carrito)
     console.log(carritoPrecio)
     console.log(carritoP)
@@ -133,13 +199,39 @@ $("#selectProdu4").click((e) => {
    
     $("#respuesta").html(`<div class="monto">
                           <h2>El total de su carrito es: </h2>
-                          <p>$${total}</p>
+                          <p>$${totalPrecio}</p>
                           </div>
                           <div class="selector">
                           <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
                           </div>`);
-});
 
+    $("#vaciarCarrito").click(() => {
+        carrito.length = 0
+        carritoPrecio.length = 0
+        total = 0
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+        let totalJson = localStorage.getItem('total')
+        totalPrecio = JSON.parse(totalJson)
+                       
+        let carritoP = localStorage.getItem('carrito')
+        carritoPParse = JSON.parse(carritoP)
+
+        console.log(carrito)
+        console.log(carritoPrecio)
+        console.log(carritoP)
+        console.log(total)
+        
+        $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${totalPrecio}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
+    })
+});
 
 $("#selectProdu8").click((e) => { 
     $("#vaciarCarrito").fadeIn();
@@ -148,9 +240,15 @@ $("#selectProdu8").click((e) => {
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+    localStorage.setItem("total", JSON.stringify(total))
+
+    let totalJson = localStorage.getItem('total')
+    totalPrecio = JSON.parse(totalJson)
 
     let carritoP = localStorage.getItem('carrito')
     carritoPParse = JSON.parse(carritoP)
+
+
     console.log(carrito)
     console.log(carritoPrecio)
     console.log(carritoP)
@@ -158,13 +256,39 @@ $("#selectProdu8").click((e) => {
    
     $("#respuesta").html(`<div class="monto">
                           <h2>El total de su carrito es: </h2>
-                          <p>$${total}</p>
+                          <p>$${totalPrecio}</p>
                           </div>
                           <div class="selector">
                           <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
                           </div>`);
-});
 
+    $("#vaciarCarrito").click(() => {
+        carrito.length = 0
+        carritoPrecio.length = 0
+        total = 0
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+        let totalJson = localStorage.getItem('total')
+        totalPrecio = JSON.parse(totalJson)
+                       
+        let carritoP = localStorage.getItem('carrito')
+        carritoPParse = JSON.parse(carritoP)
+
+        console.log(carrito)
+        console.log(carritoPrecio)
+        console.log(carritoP)
+        console.log(total)
+        
+        $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${totalPrecio}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
+    })
+});
 
 $("#selectProdu10").click((e) => { 
     $("#vaciarCarrito").fadeIn();
@@ -173,9 +297,15 @@ $("#selectProdu10").click((e) => {
     let total = carritoPrecio.reduce((a, b) => a + b, 0);
 
     localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+    localStorage.setItem("total", JSON.stringify(total))
+
+    let totalJson = localStorage.getItem('total')
+    totalPrecio = JSON.parse(totalJson)
 
     let carritoP = localStorage.getItem('carrito')
     carritoPParse = JSON.parse(carritoP)
+
+
     console.log(carrito)
     console.log(carritoPrecio)
     console.log(carritoP)
@@ -183,27 +313,38 @@ $("#selectProdu10").click((e) => {
    
     $("#respuesta").html(`<div class="monto">
                           <h2>El total de su carrito es: </h2>
-                          <p>$${total}</p>
+                          <p>$${totalPrecio}</p>
                           </div>
                           <div class="selector">
                           <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
                           </div>`);
+
+    $("#vaciarCarrito").click(() => {
+        carrito.length = 0
+        carritoPrecio.length = 0
+        total = 0
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
+
+        let totalJson = localStorage.getItem('total')
+        totalPrecio = JSON.parse(totalJson)
+                       
+        let carritoP = localStorage.getItem('carrito')
+        carritoPParse = JSON.parse(carritoP)
+
+        console.log(carrito)
+        console.log(carritoPrecio)
+        console.log(carritoP)
+        console.log(total)
+        
+        $("#respuesta").html(`<div class="monto">
+                          <h2>El total de su carrito es: </h2>
+                          <p>$${totalPrecio}</p>
+                          </div>
+                          <div class="selector">
+                          <button type="button" class="btn btn-default" id="vaciarCarrito">Descartar productos</button>
+                          </div>`);
+    })
 });
-
-
-$("#vaciarCarrito").click((e) => {
-    const carrito = []
-    const carritoPrecio = []
-    console.log(carritoPrecio)
-
-    localStorage.setItem("carrito", JSON.stringify(carritoPrecio));
-
-    let carritoP = localStorage.getItem('carrito')
-    carritoPParse = JSON.parse(carritoP)
-    console.log(carrito)
-    console.log(carritoPrecio)
-    console.log(carritoP)
-    console.log(carritoPParse)
-})
 
 
