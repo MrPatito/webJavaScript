@@ -38,6 +38,29 @@ $(".selector").click((e) => {
 })
 
 
+//URL JSON PLACEHOLDER
+const URLGET = "https://jsonplaceholder.typicode.com/posts"
+
+//BOTON
+$(".pruebaAJAX").prepend('<button id="btn1">buscar usuario</button>');
+
+//ESCUCHAR EVENTO
+$("#btn1").click(() => { 
+    $.get(URLGET, function (respuesta, estado) {
+            $("div").remove(".reestablecer")
+            if(estado === "success"){
+            console.log(respuesta[5])
+            let misDatos = respuesta[0]
+              $(".pruebaAJAX").prepend(`<div class="reestablecer">
+                                   <h3>${misDatos.title}</h3>
+                                   <p> ${misDatos.body}</p>
+                                  </div>`);
+            
+          
+
+        }
+    });
+});
 
 
 

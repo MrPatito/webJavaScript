@@ -1,0 +1,10 @@
+[
+    {
+        "id" : 1,
+        "modelo" : "doscientos Watt",
+        "dimensiones" : "25 cm x 13 cm x 5 cm",
+        "cantidadLed" : 4,
+        "watts" : 200,
+        "precio" : 12000
+    }
+]
